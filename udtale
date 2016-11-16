@@ -1,4 +1,9 @@
 #! /bin/bash
 
-Rscript opt/udtale/download_audio_ddo.R $1 || \
-Rscript opt/udtale/download_audio_wiktionary.R $1 
+OUT_FILE=$1
+PATH_TO_FILE=~/MEGA/Biblioteca/Anki/Antonio/collection.media
+
+Rscript ~/opt/udtale/download_audio_ddo.R $OUT_FILE && \
+play $PATH_TO_FILE/$OUT_FILE.mp3 || \
+Rscript ~/opt/udtale/download_audio_wiktionary.R $OUT_FILE  && \
+play $PATH_TO_FILE/$OUT_FILE.ogg
