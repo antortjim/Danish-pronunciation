@@ -1,0 +1,4 @@
+#! /bin/bash
+
+Rscript opt/udtale/download_audio_ddo.R $1 || \
+Rscript opt/udtale/download_audio_wiktionary.R $1 

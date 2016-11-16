@@ -1,0 +1,24 @@
+library("rvest", quietly = T)
+setwd("~/MEGA/Biblioteca/Anki/Antonio/collection.media/")
+
+arguments <- commandArgs(trailingOnly = TRUE)
+query <- arguments[1]
+query <- "lære"
+wiktionary.url <- paste("https://en.wiktionary.org/wiki/", query, "#Danish", sep = "")  
+ord.entry <- read_html(wiktionary.url)
+  
+audio <- ord.entry %>% 
+html_node(".mediaContainer source") %>%
+html_attr("src")
+#audio <- paste("https:", audio, sep = "")
+
+
+if(!is.na(audio)) {
+  message("Found audio file at Wiktionary !")
+  filename <- paste(query, "ogg", sep = ".")
+  download.file(audio, destfile = filename, quiet = TRUE)
+  
+} else {
+  err.message <- paste("No pronunciation file found for", query, "at Wiktionary", sep = " ")
+  stop(err.message)
+}
