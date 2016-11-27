@@ -4,4 +4,5 @@ BASE=$1
 
 ROUTE=$2
 
+cd "$(dirname "$0")"
 Rscript udtale.R $BASE $ROUTE

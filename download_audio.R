@@ -1,4 +1,6 @@
 # Main functions
+
+lapply(list("rvest", "httr", "dplyr"), function(x) suppressMessages(library(x, character.only=TRUE)))
 library("rvest", quietly = T)
 library("httr",  quietly = T)
 library("dplyr", quietly = T)

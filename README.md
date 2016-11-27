@@ -2,7 +2,7 @@
 
 A useful tool for learning the **Danish language**. This project consists provides code that can retrieve a pronunciation file for a given Danish word.
 
-The program first tries to download from [ Det Danske Ordbog](http://ordnet.dk/ddo) , then from [Wiktionary](https://en.wiktionary.org/wiki/Wiktionary:Main_Page) . Support is required for searching [ Forvo](forvo.com) .
+The program first tries to download from [ Den Danske Ordbog](http://ordnet.dk/ddo) , then from [Wiktionary](https://en.wiktionary.org/wiki/Wiktionary:Main_Page) . Support is required for searching [ Forvo](forvo.com) .
 
 
 These audio files can be very useful to use in conjunction with learning software such as Anki.
@@ -41,7 +41,7 @@ git clone https://github.com/antortjim/Danish-pronunciation.git
 ```
 Alternatively, you may download the files manually from Github.
 
-Once dowloaded, edit the input_parameters file to feature the destination folder in your system.
+Once downloaded, edit the input_parameters file to feature the destination folder in your system.
 
 ### Test
 
@@ -59,7 +59,10 @@ udtale regning
 
 A file is found in Den Danske Ordbog. The regning.mp3 file is downloaded and Wiktionary is not searched.
 
+## Trivia
 
+*Udtale* means Pronunciation in Danish.
+ 
 ## Authors
 
 * **Antonio Ortega**
