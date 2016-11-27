@@ -10,10 +10,15 @@ ord.entry <- read_html(wiktionary.url)
 audio <- ord.entry %>% 
 html_node(".mediaContainer source") %>%
 html_attr("src")
-audio <- paste("https:", audio, sep = "")
 
 
 if(!is.na(audio)) {
+  correct <- unlist(strsplit(audio, split = ""))[1] == "h"
+  print(correct)
+  if(!correct)
+  {
+    audio <- paste("https:", audio, sep = "")
+  }
   message("Found audio file at Wiktionary !")
   filename <- paste(query, "ogg", sep = ".")
   print(audio)
