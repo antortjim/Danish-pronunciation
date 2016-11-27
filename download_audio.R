@@ -1,7 +1,7 @@
 # Main functions
 library("rvest", quietly = T)
-library("httr")
-library("dplyr")
+library("httr",  quietly = T)
+library("dplyr", quietly = T)
 
 wiktionary.download <- function(query)
 {
