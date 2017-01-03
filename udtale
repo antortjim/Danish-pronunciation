@@ -1,8 +1,10 @@
 #! /bin/bash
 
+cd "$(dirname "$0")"
+
 BASE=$1
 
-ROUTE=$2
+echo "Querying $BASE"
+ROUTE=$(cat input_parameters | awk '{print $2}')
 
-cd "$(dirname "$0")"
-Rscript udtale.R $BASE $ROUTE
+Rscript udtale.R $BASE
