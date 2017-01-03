@@ -5,6 +5,6 @@ cd "$(dirname "$0")"
 BASE=$1
 
 echo "Querying $BASE"
-ROUTE=$(cat input_parameters | awk '{print $2}')
+ROUTE=$(cat input_parameters | grep root_dir | awk '{print $2}')
 
 Rscript udtale.R $BASE

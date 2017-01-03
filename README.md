@@ -2,10 +2,10 @@
 
 A useful tool for learning the **Danish language**. This project consists provides code that can retrieve a pronunciation file for a given Danish word.
 
-The program first tries to download from [ Den Danske Ordbog](http://ordnet.dk/ddo) , then from [Wiktionary](https://en.wiktionary.org/wiki/Wiktionary:Main_Page) . Support is required for searching [ Forvo](forvo.com) .
+The program first tries to download from [ Den Danske Ordbog](http://ordnet.dk/ddo), then from [Forvo](https://forvo.com/).
 
+Please read [Forvo's terms of service](https://api.forvo.com/documentation/general-information/) and conditions carefully to see if the usage you want to give to their files is adequate!
 
-These audio files can be very useful to use in conjunction with learning software such as Anki.
 
 
 ### Prerequisites
@@ -51,13 +51,13 @@ Call the programme passing Danish words
 udtale første
 ```
 
-No audio file is found in Den Danske Ordbog, but one is found in Wiktionary. The første.ogg file is downloaded to the folder specified in input_parameters.
+No audio file is found in Den Danske Ordbog, but one is found in Forvo. The første.mp3 file is downloaded to the folder specified in input_parameters.
 
 ```
 udtale regning
 ```
 
-A file is found in Den Danske Ordbog. The regning.mp3 file is downloaded and Wiktionary is not searched.
+A file is found in Den Danske Ordbog. The regning.mp3 file is downloaded and Forvo is not searched.
 
 ## Trivia
 
@@ -67,7 +67,6 @@ A file is found in Den Danske Ordbog. The regning.mp3 file is downloaded and Wik
 
 * **Antonio Ortega**
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 

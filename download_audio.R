@@ -94,14 +94,16 @@ ddo.download <- function(query, base.filename)
 
 
 fileName <- 'forvo_key'
-forvo_key <- readChar(fileName, file.info(fileName)$size)
+forvo.key <- readChar(fileName, file.info(fileName)$size) 
+forvo.key <- substr(forvo.key, 1, nchar(forvo.key) - 1)
 
-forvo.download <- function(query, base.filename)
-{
+forvo.download <- function(query, base.filename) {
   message("Searching Forvo")
   # Build url for query using FORVO api
-  forvo.url <- paste("https://apifree.forvo.com/key", forvo_key, "format/xml/action/word-pronunciations/word",
+  forvo.url <- paste("https://apifree.forvo.com/key", forvo.key, "format/xml/action/word-pronunciations/word",
                      query, "language/da", sep = "/")
+
+  print(forvo.url)
   
   # Read url
   ord.entry <- read_xml(forvo.url)
@@ -123,6 +125,4 @@ forvo.download <- function(query, base.filename)
     message(not.found, "Forvo!")
     invisible(FALSE)
   }
-
 }
-
